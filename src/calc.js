@@ -50,7 +50,7 @@ class Calculator extends React.Component {
 
   pressAdd(event) {
       event.preventDefault(); 
-      var num = parseInt(this.state.display);
+      var num = parseFloat(this.state.display);
       var historyArray = this.state.history;
       historyArray.push(num);
       historyArray.push("+");
@@ -62,7 +62,7 @@ class Calculator extends React.Component {
 
   pressSub(event) {
       event.preventDefault();
-      var num = parseInt(this.state.display);
+      var num = parseFloat(this.state.display);
       var historyArray = this.state.history;
       historyArray.push(num);
       historyArray.push("-");
@@ -74,7 +74,7 @@ class Calculator extends React.Component {
 
   pressMult(event) {
       event.preventDefault();
-      var num = parseInt(this.state.display);
+      var num = parseFloat(this.state.display);
       var historyArray = this.state.history;
       historyArray.push(num);
       historyArray.push("*");
@@ -86,7 +86,7 @@ class Calculator extends React.Component {
 
   pressDivide(event) {
       event.preventDefault();
-      var num = parseInt(this.state.display);
+      var num = parseFloat(this.state.display);
       var historyArray = this.state.history;
       historyArray.push(num);
       historyArray.push("/");
@@ -98,7 +98,7 @@ class Calculator extends React.Component {
 
   pressEquals(event) {
       event.preventDefault();
-      var num = parseInt(this.state.display);
+      var num = parseFloat(this.state.display);
       var historyArray = this.state.history;
       historyArray.push(num);
       var result = 0.0;
@@ -107,7 +107,7 @@ class Calculator extends React.Component {
         console.log(historyArray[i])
           if (i===0) {
               result = value;
-          }     
+          }
           else if (isNaN(value)) {
               
             switch(value){
